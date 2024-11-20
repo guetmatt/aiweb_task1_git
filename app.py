@@ -1,5 +1,5 @@
 import streamlit as st
 
-st.title("Hello world")
 
-st.write("This is my first web app.")
+pg = st.navigation([st.Page("guessing_game.py"), st.Page("stats.py")])
+pg.run()
