@@ -12,6 +12,11 @@ import time
 #     st.session_state["openai_model"] = "gpt-4o-mini"
 
 
+# page links for navigation alternative to sidebar
+st.page_link("game.py", label="Guessing Game", icon="🎲")
+st.page_link("stats.py", label = "Statistics", icon="🔢")
+
+
 #-----------------#
 #--- Functions ---#
 #-----------------#
