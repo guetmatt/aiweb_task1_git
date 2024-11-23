@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 
-st.title("Welcome to the statistics page!")
+st.title("Welcome to the stats page!🔢")
 
 
 st.subheader("Number of attempts per round", divider="gray")

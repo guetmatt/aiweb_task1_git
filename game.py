@@ -5,7 +5,7 @@ import time
 
 
 ######### CHAT FEATURE #########
-st.title("Numbers Guessing Game")
+st.title("🎲Guessing Game")
 
 
 ## SETUP
@@ -125,41 +125,3 @@ if prompt := st.chat_input("What is up?", key="input_main"):
         with st.chat_message("assistant"):
             response = st.write_stream(response_generator(7))
         st.session_state.messages.append({"role": "assistant", "content": response})
-    #-----------------------------------------------------------------------------------------------#
-
-
-# st.title("Let's play a guessing game!")
-
-
-# if "goal" not in st.session_state:
-#     st.session_state.goal = random.randint(0, 100)
-
-# if "number_of_guesses" not in st.session_state:
-#     st.session_state.number_of_guesses = 0
-
-# with st.form("user_input_guess"):
-#     guess = st.number_input("Please guess a number from 0 too 100.", min_value=0, max_value=100, value=None,
-#                             placeholder="Type a number...")                    
-#     st.form_submit_button("Press to guess")
-    
-
-# if type(guess) == int and guess in range(0, 101):
-#     st.session_state.number_of_guesses += 1
-# st.write("Number of guesses:", st.session_state.number_of_guesses)
-
-
-# if guess == st.session_state.goal:
-#     st.balloons()
-#     st.write("Congratulations, yor guess", guess, "is correct!")
-#     st.write("A new goal number has been generated.")
-#     st.session_state.goal = random.randint(0, 100)
-#     st.session_state.number_of_guesses = 0
-# else:
-#     st.write("Your guess", guess, "does not match the goal number.\nPlease try again.")
-
-#     guess_feedback = st.checkbox("Fancy a tip?")
-#     if guess_feedback:
-#         try:
-#             st.write(goal_is_smaller(st.session_state.goal, guess))
-#         except:
-#             st.write("No number guessed. Please guess a number.")    
